@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Counter from '../components/Counter.astro';
+---
+
+<Layout title="Counter App">
+	<main>
+		<h1>Counter App</h1>
+		<Counter />
+		<p class="instructions">
+			Use keyboard arrows to control the counter:<br />
+			<span>↑ Decrease (-1)</span><br />
+			<span>← Increase (+1)</span>
+		</p>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		min-height: 100vh;
+		justify-content: center;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		margin-top: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+		text-align: center;
+	}
+	.instructions span {
+		color: rgb(var(--accent-light));
+		font-weight: bold;
+	}
+</style>
